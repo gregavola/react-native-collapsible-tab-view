@@ -168,7 +168,7 @@ const ExampleList: React.FC<object> = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#eceff1',
-    height: Platform.OS === 'web' ? '100vh' : '100%',
+    height: '100%',
   },
   statusbar: {
     height: Platform.select({

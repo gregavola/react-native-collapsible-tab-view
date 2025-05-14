@@ -14,7 +14,6 @@ import Animated, {
 } from 'react-native-reanimated'
 
 import { Context, TabNameContext } from './Context'
-import { Lazy } from './Lazy'
 import { MaterialTabBar, TABBAR_HEIGHT } from './MaterialTabBar'
 import { Tab } from './Tab'
 import { IS_IOS, ONE_FRAME_MS, scrollToImpl } from './helpers'
@@ -71,8 +70,6 @@ export const Container = React.memo(
         headerContainerStyle,
         cancelTranslation,
         containerStyle,
-        lazy,
-        cancelLazyFadeIn,
         pagerProps,
         onIndexChange,
         onTabChange,
@@ -438,18 +435,11 @@ export const Container = React.memo(
                 return (
                   <View key={i} style={styles.pageContainer}>
                     <TabNameContext.Provider value={tabName}>
-                      <Lazy
-                        startMounted={lazy ? undefined : true}
-                        cancelLazyFadeIn={!lazy ? true : !!cancelLazyFadeIn}
-                        // ensure that we remount the tab if its name changes but the index doesn't
-                        key={tabName}
-                      >
-                        {
-                          React.Children.toArray(children)[
-                            i
-                          ] as React.ReactElement
-                        }
-                      </Lazy>
+                      {
+                        React.Children.toArray(children)[
+                          i
+                        ] as React.ReactElement
+                      }
                     </TabNameContext.Provider>
                   </View>
                 )

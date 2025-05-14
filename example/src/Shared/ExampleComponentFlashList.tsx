@@ -18,7 +18,7 @@ type Props = {
 const Example = React.forwardRef<CollapsibleRef, Props>(
   ({ emptyContacts, ...props }, ref) => {
     return (
-      <Tabs.Container ref={ref} headerHeight={HEADER_HEIGHT} lazy {...props}>
+      <Tabs.Container ref={ref} headerHeight={HEADER_HEIGHT} {...props}>
         <Tabs.Tab name="article" label="Article">
           <Article />
         </Tabs.Tab>

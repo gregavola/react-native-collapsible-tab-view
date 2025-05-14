@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { Alert, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { useHeaderMeasurements } from 'react-native-collapsible-tab-view'
 import Animated, {
   interpolate,
@@ -43,6 +43,13 @@ export const Header = () => {
       <Animated.View style={[styles.container, stylez]}>
         <ReText style={styles.text} text={scrollYText} />
       </Animated.View>
+      <TouchableOpacity
+        onPress={() => {
+          Alert.alert('Test', 'Test Button')
+        }}
+      >
+        <Text>Button</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -64,6 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     height: 250,
+    pointerEvents: 'box-none',
   },
   container: {
     height: MIN_HEADER_HEIGHT,
