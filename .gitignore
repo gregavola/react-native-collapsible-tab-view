@@ -5,6 +5,9 @@
 # XDE
 .expo/
 
+example
+example/** 
+
 web-build/
 
 # VSCode
