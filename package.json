@@ -18,12 +18,8 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn",
-    "prepack": "bob build",
     "docs": "ts-node ./documentation/buildDocs.ts",
     "prepare": "bob build && husky install"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "react-native-component",
