@@ -18,8 +18,7 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn",
-    "docs": "ts-node ./documentation/buildDocs.ts",
-    "prepare": "bob build && husky install"
+    "docs": "ts-node ./documentation/buildDocs.ts"
   },
   "keywords": [
     "react-native-component",
