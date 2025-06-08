@@ -1,6 +1,7 @@
 {
   "name": "react-native-collapsible-tab-view",
   "version": "8.0.3",
+  "private": true,
   "description": "Collapsible tab view component for React Native",
   "main": "lib/commonjs/index.js",
   "react-native": "src/index.tsx",
